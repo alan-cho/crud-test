@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 
 app.get("/api", async (req, res) => {
   let allPeople = await res.locals.store.loadAllPeople();
-  console.log(allPeople);
+  res.json(allPeople);
 });
 
 app.listen(PORT, () => console.log("Listening on port: 3001"));
