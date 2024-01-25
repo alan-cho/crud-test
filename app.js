@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/api", async (req, res) => {
+app.get("/api/people", async (req, res) => {
   let allPeople = await res.locals.store.loadAllPeople();
   res.json(allPeople);
 });
