@@ -9,7 +9,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
